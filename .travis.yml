@@ -6,7 +6,6 @@ node_js:
 before_install:
 - sudo apt-get update -qq
 install:
-- cd app
 - npm install
 script:
 - npm test
