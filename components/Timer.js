@@ -2,12 +2,13 @@ import React from 'react'
 
 export default React.createClass({
   getInitialState: () => {
-    return {timeRemaining: 10};
+    return {timeRemaining: 5, secDisplay: '00', minDisplay: '25'};
   },
   tick: function () {
     this.setState({timeRemaining: this.state.timeRemaining - 1,
-    				mins: Math.floor(this.state.timeRemaining/60),
-                    seconds: this.state.timeRemaining % 60});
+                    seconds: ('0' + this.state.timeRemaining % 60).slice(-2),
+                    minutes: ('0' + Math.floor(this.state.timeRemaining / 60)).slice(-2)
+    });
   },
   componentDidMount: function () {
     this.interval = setInterval(this.tick, 1000)
@@ -16,12 +17,12 @@ export default React.createClass({
     clearInterval(this.interval);
   },
   componentWillUpdate: function () {
-    if (this.state.timeRemaining === 0) { window.alert('MUSIC TIME')}
+    if (this.state.timeRemaining === 0) { this.props.activatePlayer() }
   },
   render: function () {
     return (
       <div>
-     	{this.state.mins}:{this.state.seconds}
+     	{this.state.minutes}:{this.state.seconds}
       </div>
     );
   }
