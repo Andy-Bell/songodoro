@@ -1,11 +1,12 @@
 import React from 'react';
+import SpotifyPlayer from './SpotifyPlayer'
 
 export default React.createClass({
 
   render() {
     return (
       <div>
-        <h1>Hello World</h1>
+        <SpotifyPlayer />
       </div>
     );
   }
