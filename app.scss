@@ -1,0 +1,10 @@
+@import "normalize";
+@import "compass";
+@import "~susy/sass/susy";
+@import "breakpoint";
+
+$susy: (
+  columns: 12,  // The number of columns in your grid
+  gutters: 1/4, // The size of a gutter in relation to a single column
+);
+
