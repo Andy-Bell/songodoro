@@ -10,19 +10,3 @@ describe('test', () => {
   })
 
 })
-
-describe('Main', () => {
-  const main = mount(<Main />)
-
-  it('contains h1 tag', () => {
-    const actual = main.find('h1');
-    const expected = 1;
-    expect(actual).to.be.length(expected);
-  })
-
-  it('contains html Hello World', () => {
-    const actual = main.find('h1').text();
-    const expected = 'Hello World'
-    expect(actual).to.be.equal(expected)
-  })
-})
