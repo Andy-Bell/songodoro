@@ -6,7 +6,8 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:dev": "webpack-dev-server --inline --content-base public --history-api-fallback",
-    "start:prod": "webpack && node server.js"
+    "start:prod": "webpack && node server.js",
+    "test": "mocha --compilers js:babel-core/register --recursive"
   },
   "author": "",
   "license": "ISC",
@@ -14,9 +15,8 @@
     "compression": "^1.6.2",
     "express": "^4.14.0",
     "if-env": "^1.0.0",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "react-router": "^2.0.0"
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
@@ -25,6 +25,12 @@
     "babel-preset-react": "^6.5.0",
     "http-server": "^0.8.5",
     "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "chai": "^3.5.0",
+    "enzyme": "^2.4.1",
+    "jsdom": "^9.1.0",
+    "mocha": "^2.4.5",
+    "react-addons-test-utils": "^15.0.2",
+    "sinon": "^1.17.4"
   }
 }
