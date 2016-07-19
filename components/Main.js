@@ -1,12 +1,14 @@
 import React from 'react';
 import Timer from './Timer'
+import SpotifyPlayer from './SpotifyPlayer'
+
 
 export default React.createClass({
 
-  getInitialState: () => { return {spotify: <div>NO MUSIC</div>}
+  getInitialState: () => { return {spotify: ''}
   },
   renderPlayer: function () {
-    this.setState({spotify: <div>MUSIC TIME</div>})
+    this.setState({spotify: <SpotifyPlayer />})
   },
 
   render() {
