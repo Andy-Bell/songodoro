@@ -9,17 +9,16 @@ import sample from 'lodash/sample'
 export default React.createClass({
 
   getInitialState: () => {
-    return { spotify: null, tracks: trackList };
+    return { currentTrack: null, tracks: trackList };
   },
 
   mountPlayer: function () {
-    this.setState({spotify: <SpotifyPlayer />, tracks: this.state.tracks });
     this.selectTrack();
   },
 
   selectTrack: function () {
     let chosenTrack = sample(this.state.tracks);
-    this.setState({ spotify: this.state.spotify,
+    this.setState({ currentTrack: chosenTrack,
                     tracks: (this.state.tracks).filter( (track) => {
                       return track != chosenTrack
                     })
@@ -29,11 +28,12 @@ export default React.createClass({
 
 
   render() {
+
     return (
       <div>
         <h1>Songodoro</h1>
         <Timer activatePlayer={this.mountPlayer}/>
-        {this.state.spotify}
+        {this.state.currentTrack ? <SpotifyPlayer track={this.state.currentTrack}/> : null}
         {this.state.tracks.length}
       </div>
     )

@@ -1,12 +1,11 @@
 var React = require('react');
-import Spotify from 'spotify-web-api-js'
-const s = new Spotify()
+
 
 export default React.createClass({
 
   render: function() {
     return (
-    <iframe src="https://embed.spotify.com/?uri=spotify:user:cameronepstein:playlist:7Cm8i57BnVpMhJIA7671xv" width="400" height="80" frameborder="0" allowtransparency="true"></iframe>
+    <iframe src={"https://embed.spotify.com/?uri=" + this.props.track} width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
     );
   }
 
