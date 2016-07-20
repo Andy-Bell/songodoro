@@ -17,7 +17,8 @@ export default React.createClass({
     clearInterval(this.interval);
   },
   componentWillUpdate: function () {
-    if (this.state.timeRemaining === 0) { this.props.activatePlayer() }
+    if (this.state.timeRemaining === 0) { this.props.activatePlayer(),
+                                          clearInterval(this.interval) }
   },
   render: function () {
     return (
