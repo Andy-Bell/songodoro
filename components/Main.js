@@ -1,5 +1,6 @@
 import React from 'react';
-import SpotifyPlayer from './SpotifyPlayer'
+import SpotifyPlayer from './SpotifyPlayer';
+import ClockControl from './ClockControl';
 
 export default React.createClass({
 
@@ -7,6 +8,7 @@ export default React.createClass({
     return (
       <div>
         <SpotifyPlayer />
+        <ClockControl />
       </div>
     );
   }
