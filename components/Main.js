@@ -15,8 +15,6 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <ClockControl />
-
         <h1>{this.props.hello}</h1>
         <Timer activatePlayer={this.renderPlayer}/>
         {this.state.spotify}
