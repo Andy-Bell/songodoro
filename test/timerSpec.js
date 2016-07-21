@@ -19,7 +19,7 @@ describe('Timer', () => {
 
   it('should call activatePlayer when timer reaches 0', () => {
     timer.node.startFunc();
-    for(var i = 0; i < 5; i++) {
+    for(var i = 0; i < 1499; i++) {
       timer.node.tick();
     };
     expect(timer.state().test).to.equal('successful');
