@@ -41,7 +41,7 @@ export default React.createClass({
   render: function () {
     return (
       <div className="timer">
-     	<span>{this.state.minutes}:{this.state.seconds}</span>
+     	{this.props.displayTimer ? <span>{this.state.minutes}:{this.state.seconds}</span> : null}
       <ClockControl start={this.startFunc} pause={this.pauseFunc} reset={this.resetFunc} />
       </div>
     );

@@ -26,12 +26,11 @@ export default React.createClass({
 
 
   render() {
-
     return (
       <div>
         <h1>Songodoro</h1>
-        <Timer activatePlayer={this.mountPlayer}/>
-        {this.state.currentTrack ? <SpotifyPlayer track={this.state.currentTrack}/> : null}
+        <Timer ref="timer" activatePlayer={this.mountPlayer} displayTimer={this.state.currentTrack ? false : true }/>
+        {this.state.currentTrack ? <SpotifyPlayer track={this.state.currentTrack}/>  : null }
       </div>
     )
   }
