@@ -9,6 +9,9 @@ export default React.createClass({
   testing: function() {
     console.log('Andy');
   },
+  breakTimer: function () {
+    this.setState({timeRemaining: 10, seconds: '10', minutes: '00'});
+  },
   tick: function () {
     this.setState({timeRemaining: this.state.timeRemaining - 1,
                     seconds: ('0' + this.state.timeRemaining % 60).slice(-2),
@@ -24,6 +27,7 @@ export default React.createClass({
   resetFunc: function() {
     clearInterval(this.interval);
     this.setState({timeRemaining: 4, seconds: '40', minutes: '01'});
+    
   },
   componentWillUnmount: () => {
     clearInterval(this.interval);
@@ -32,6 +36,7 @@ export default React.createClass({
     if (this.state.timeRemaining === 0) {
       this.props.activatePlayer();
       clearInterval(this.interval);
+      this.breakTimer();
     }
   },
   render: function () {
