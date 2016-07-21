@@ -3,7 +3,7 @@ import ClockControl from './ClockControl'
 
 export default React.createClass({
   getInitialState: () => {
-    return {timeRemaining: 9, seconds: '10', minutes: '00', break: false};
+    return {timeRemaining: 1, seconds: '10', minutes: '00', break: false};
     this.tick = this.tick.bind(this);
   },
   tick: function () {
@@ -14,7 +14,7 @@ export default React.createClass({
     });
   },
   breakTimer: function() {
-    this.setState({timeRemaining: 4, seconds: '05', minutes: '00', break: true});
+    this.setState({timeRemaining: 40000000, seconds: '05', minutes: '00', break: true});
   },
   startFunc: function () {
     if (this.interval) {
@@ -47,7 +47,7 @@ export default React.createClass({
   render: function () {
     return (
       <div className="timer">
-     	{this.props.displayTimer ? <span>{this.state.minutes}:{this.state.seconds}</span> : null}
+     	{this.props.displayTimer ? <div className="numbers">{this.state.minutes}:{this.state.seconds}</div> : null}
       <ClockControl start={this.startFunc} pause={this.pauseFunc} reset={this.resetFunc} />
       </div>
     );

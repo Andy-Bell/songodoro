@@ -1,7 +1,98 @@
-#app {
+html {
+  font-family: 'Lato', sans-serif;
+  margin: auto;
+  width: auto;
+  background-color: white;
+}
 
+.title {
+  font-size: 5vw;
+  text-align: center;
+  margin-bottom: 2.5vw;
+}
+.slash {
+  color: #ff3300;
 }
 
 .timer {
+  text-align: center;
+  font-size: 15vw;
+  margin-top: 2.5vw;
+}
 
+.numbers {
+  font-size: 15vw;
+  margin-top: 4vw;
+  margin-bottom: 2.5vw;
+}
+
+.spotify-player {
+  margin: 0 auto 0;
+  width: 35vw;
+  height: 41.5vw;
+  padding: 1.5vw;
+}
+
+.buttons {
+  font-size: 0;
+}
+
+#startButton {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin: 1vw;
+  padding: 1.5vw;
+  border-color: black;
+  border-width: 0.4vw;
+  background-color: white;
+}
+#startButton:hover {
+  color: #ff3300;
+}
+#startButton:active {
+  position: relative;
+  top: 0.2vw;
+}
+#startButton:focus {
+  outline: 0;
+}
+
+#pauseButton {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin: 1vw;
+  padding: 1.5vw;
+  border-color: black;
+  border-width: 0.4vw;
+  background-color: white;
+}
+#pauseButton:hover {
+  color: #ff3300;
+}
+#pauseButton:active {
+  position: relative;
+  top: 0.2vw;
+}
+#pauseButton:focus {
+  outline: 0;
+}
+
+#resetButton {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin: 1vw;
+  padding: 1.5vw;
+  border-color: black;
+  border-width: 0.4vw;
+  background-color: white;
+}
+#resetButton:hover {
+  color: #ff3300;
+}
+#resetButton:active {
+  position: relative;
+  top: 0.2vw;
+}
+#resetButton:focus {
+  outline: 0;
 }
