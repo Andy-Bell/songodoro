@@ -13,7 +13,10 @@ export default React.createClass({
     });
   },
   startFunc: function () {
-    this.interval = setInterval(this.tick, 1000)
+    if (this.interval) {
+    } else {
+      this.interval = setInterval(this.tick, 1000)
+    }
   },
   pauseFunc: function() {
     clearInterval(this.interval);
