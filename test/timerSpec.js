@@ -13,7 +13,7 @@ describe('Timer', () => {
   it('displays a time in minutes and seconds', () => {
     timer.node.startFunc();
     timer.node.tick(1);
-    const actual = timer.find('.timer span').first().text();
+    const actual = timer.find('.numbers').first().text();
     const length = 5;
     expect(actual).to.be.lengthOf(length);
   });
