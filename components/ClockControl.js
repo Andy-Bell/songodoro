@@ -10,8 +10,6 @@ export default React.createClass({
 
         <button id="pauseButton" onClick={this.props.pause}> Pause </button>
 
-        <button id="stopButton" onClick={this.props.stop}> Stop </button>
-
         <button id="resetButton" onClick={this.props.reset}> Reset </button>
       </div>
     );
