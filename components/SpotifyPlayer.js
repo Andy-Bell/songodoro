@@ -5,7 +5,9 @@ export default React.createClass({
 
   render: function() {
     return (
-    <iframe src={"https://embed.spotify.com/?uri=" + this.props.track} width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+      <div className="spotify-player">
+        <iframe src={"https://embed.spotify.com/?uri=" + this.props.track} width="700" height="780" frameborder="0" allowtransparency="true"></iframe>
+      </div>
     );
   }
 

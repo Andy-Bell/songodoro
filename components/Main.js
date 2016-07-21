@@ -34,7 +34,6 @@ export default React.createClass({
         <h1>Songodoro</h1>
         <Timer activatePlayer={this.mountPlayer}/>
         {this.state.currentTrack ? <SpotifyPlayer track={this.state.currentTrack}/> : null}
-        {this.state.tracks.length}
       </div>
     )
   }

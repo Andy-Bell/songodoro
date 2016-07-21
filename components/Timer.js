@@ -2,7 +2,7 @@ import React from 'react'
 
 export default React.createClass({
   getInitialState: () => {
-    return {timeRemaining: 5, secDisplay: '00', minDisplay: '25'};
+    return {timeRemaining: 1499, secDisplay: '00', minDisplay: '25'};
   },
   tick: function () {
     this.setState({timeRemaining: this.state.timeRemaining - 1,
@@ -18,7 +18,7 @@ export default React.createClass({
   },
   componentWillUpdate: function () {
     if (this.state.timeRemaining === 0) { this.props.activatePlayer(),
-                                          clearInterval(this.interval) }
+                                           clearInterval(this.interval) }
   },
   render: function () {
     return (
