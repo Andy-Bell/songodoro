@@ -1,10 +1,8 @@
 import React from 'react';
+import SpotifyPlayer from './SpotifyPlayer';
 import Timer from './Timer'
-import SpotifyPlayer from './SpotifyPlayer'
 import { trackList } from '../tracks'
 import sample from 'lodash/sample'
-
-
 
 export default React.createClass({
 
