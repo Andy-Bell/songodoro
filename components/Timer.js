@@ -4,6 +4,7 @@ import ClockControl from './ClockControl'
 export default React.createClass({
   getInitialState: () => {
     return {timeRemaining: 4, seconds: '40', minutes: '01'};
+    this.tick = this.tick.bind(this);
   },
   testing: function() {
     console.log('Andy');
@@ -36,7 +37,7 @@ export default React.createClass({
   render: function () {
     return (
       <div className="timer">
-     	{this.state.minutes}:{this.state.seconds}
+     	<span>{this.state.minutes}:{this.state.seconds}</span>
       <ClockControl start={this.startFunc} pause={this.pauseFunc} reset={this.resetFunc} />
       </div>
     );
