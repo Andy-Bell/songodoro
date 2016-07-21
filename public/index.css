@@ -8,6 +8,7 @@ html {
 .title {
   font-size: 5vw;
   text-align: center;
+  margin-bottom: 2.5vw;
 }
 .slash {
   color: #ff3300;
@@ -16,12 +17,30 @@ html {
 .timer {
   text-align: center;
   font-size: 15vw;
-  margin-top: 8%;
+  margin-top: 2.5vw;
+}
+
+.numbers {
+  font-size: 15vw;
+  margin-top: 4vw;
+  margin-bottom: 2.5vw;
 }
 
 .spotify-player {
-  width: 90vw;
-  height: 91vw;
+  margin: 0 auto 0;
+  width: 35.11vw;
+  height: 35vw;
+  padding: 1.5vw;
+}
+
+.spotify-player-border {
+  margin: 1vw;
+  border-color: black;
+  border-width: 0.4vw;
+}
+
+.buttons {
+  font-size: 0;
 }
 
 #startButton {

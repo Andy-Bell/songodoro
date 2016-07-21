@@ -5,9 +5,9 @@ export default React.createClass({
 
   render: function() {
     return (
-      <div className="spotify-player">
+      <div className="spotify-player-border"><div className="spotify-player">
         <iframe src={"https://embed.spotify.com/?uri=" + this.props.track} width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
-      </div>
+      </div></div>
     );
   }
 
