@@ -12,6 +12,7 @@ export default React.createClass({
 
   mountPlayer: function () {
     this.selectTrack();
+    this.spawnNotification('Music Time!')
   },
 
   selectTrack: function () {
@@ -26,6 +27,15 @@ export default React.createClass({
 
   unMountPlayer: function() {
     this.setState({currentTrack: null, tracks: this.state.tracks});
+    this.spawnNotification('Break Over :(')
+  },
+
+  spawnNotification: function(bodyTxt) {
+    var options = {
+        body: bodyTxt,
+        icon: './note.png'
+    }
+    var n = new Notification('Songodoro',options);
   },
 
   render() {

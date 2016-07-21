@@ -14,7 +14,7 @@ export default React.createClass({
     });
   },
   breakTimer: function() {
-    this.setState({timeRemaining: 40000000, seconds: '05', minutes: '00', break: true});
+    this.setState({timeRemaining: 4, seconds: '05', minutes: '00', break: true});
   },
   startFunc: function () {
     if (this.interval) {
