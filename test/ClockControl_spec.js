@@ -21,7 +21,7 @@ describe('ClockControl', () => {
 
     it ('renders a button', () => {
       const actual = main.find('button');
-      const expected = 3;
+      const expected = 4;
       expect(actual).to.be.length(expected);
     })
 
@@ -43,7 +43,7 @@ describe('ClockControl', () => {
 
     it ('renders a button', () => {
       const actual = main.find('button');
-      const expected = 3;
+      const expected = 4;
       expect(actual).to.be.length(expected);
     })
 
@@ -65,7 +65,7 @@ describe('ClockControl', () => {
 
     it ('renders a button', () => {
       const actual = main.find('button');
-      const expected = 3;
+      const expected = 4;
       expect(actual).to.be.length(expected);
     })
 
@@ -76,5 +76,28 @@ describe('ClockControl', () => {
       expect(actual).to.be.equal(expected);
     })
   });
+
+  describe('Pause Button', () => {
+
+    it ('contains a div tag', () => {
+      const actual = main.find('div');
+      const expected = 1;
+      expect(actual).to.be.length(expected);
+    })
+
+    it ('renders a button', () => {
+      const actual = main.find('button');
+      const expected = 4;
+      expect(actual).to.be.length(expected);
+    })
+
+    it ('displays Reset within the button', () => {
+      const actual = main.find('div button#pauseButton').first().text();
+      const expected = " Pause ";
+
+      expect(actual).to.be.equal(expected);
+    })
+  });
+
 
 });
