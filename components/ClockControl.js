@@ -5,12 +5,12 @@ export default React.createClass({
 
   render() {
     return (
-      <div>
-        <button id="startButton" onClick={this.props.start}> Start </button>
+      <div className="buttons">
+        <button id="startButton" onClick={this.props.start}> - START - </button>
 
-        <button id="pauseButton" onClick={this.props.pause}> Pause </button>
+        <button id="pauseButton" onClick={this.props.pause}> - PAUSE - </button>
 
-        <button id="resetButton" onClick={this.props.reset}> Reset </button>
+        <button id="resetButton" onClick={this.props.reset}> - RESET - </button>
       </div>
     );
   }

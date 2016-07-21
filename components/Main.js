@@ -29,7 +29,7 @@ export default React.createClass({
 
     return (
       <div>
-        <h1>Songodoro</h1>
+        <div className="title"><span className="slash">//  </span><span className="title-name">Songodoro</span><span className="slash">  //</span></div>
         <Timer activatePlayer={this.mountPlayer}/>
         {this.state.currentTrack ? <SpotifyPlayer track={this.state.currentTrack}/> : null}
       </div>

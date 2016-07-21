@@ -3,7 +3,7 @@ import ClockControl from './ClockControl'
 
 export default React.createClass({
   getInitialState: () => {
-    return {timeRemaining: 10, secDisplay: '05', minDisplay: '00'};
+    return {timeRemaining: 1, secDisplay: '05', minDisplay: '00'};
     this.tick = this.tick.bind(this);
   },
   tick: function () {

@@ -27,7 +27,7 @@ describe('ClockControl', () => {
 
     it ('displays Start within the button', () => {
       const actual = main.find('div button#startButton').text();
-      const expected = " Start ";
+      const expected = " - START - ";
 
       expect(actual).to.be.equal(expected);
     })
@@ -49,7 +49,7 @@ describe('ClockControl', () => {
 
     it ('displays Reset within the button', () => {
       const actual = main.find('div button#resetButton').first().text();
-      const expected = " Reset ";
+      const expected = " - RESET - ";
 
       expect(actual).to.be.equal(expected);
     })
@@ -71,7 +71,7 @@ describe('ClockControl', () => {
 
     it ('displays Reset within the button', () => {
       const actual = main.find('div button#pauseButton').first().text();
-      const expected = " Pause ";
+      const expected = " - PAUSE - ";
 
       expect(actual).to.be.equal(expected);
     })
