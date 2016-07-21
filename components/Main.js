@@ -24,12 +24,15 @@ export default React.createClass({
     return chosenTrack;
   },
 
+  unMountPlayer: function() {
+    this.setState({currentTrack: null, tracks: this.state.tracks});
+  },
 
   render() {
     return (
       <div>
         <h1>Songodoro</h1>
-        <Timer ref="timer" activatePlayer={this.mountPlayer} displayTimer={this.state.currentTrack ? false : true }/>
+        <Timer ref="timer" activatePlayer={this.mountPlayer} deactivatePlayer={this.unMountPlayer} displayTimer={this.state.currentTrack ? false : true }/>
         {this.state.currentTrack ? <SpotifyPlayer track={this.state.currentTrack}/>  : null }
       </div>
     )
