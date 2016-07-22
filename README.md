@@ -1,4 +1,4 @@
-[![Build Status](https:travis-ci.org/Andy-Bell/songodoro.svg?branch=master)](https:travis-ci.org/Andy-Bell/songodoro)
+[![Build Status](https://travis-ci.org/Andy-Bell/songodoro.svg?branch=master)](https://travis-ci.org/Andy-Bell/songodoro)
 
 # SONGODORO
 
