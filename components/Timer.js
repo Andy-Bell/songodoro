@@ -3,7 +3,7 @@ import ClockControl from './ClockControl'
 
 export default React.createClass({
   getInitialState: () => {
-    return {timeRemaining: 1, seconds: '10', minutes: '00', break: false};
+    return {timeRemaining: 1499, seconds: '00', minutes: '25', break: false};
     this.tick = this.tick.bind(this);
   },
   tick: function () {
@@ -14,7 +14,7 @@ export default React.createClass({
     });
   },
   breakTimer: function() {
-    this.setState({timeRemaining: 4, seconds: '05', minutes: '00', break: true});
+    this.setState({timeRemaining: 299, seconds: '00', minutes: '05', break: true});
   },
   startFunc: function () {
     if (this.interval) {
@@ -29,7 +29,7 @@ export default React.createClass({
   resetFunc: function() {
     clearInterval(this.interval);
     this.interval = null
-    this.setState({timeRemaining: 9, seconds: '10', minutes: '00', break: false});
+    this.setState({timeRemaining: 1499, seconds: '00', minutes: '25', break: false});
   },
   componentWillUnmount: () => {
     clearInterval(this.interval);
