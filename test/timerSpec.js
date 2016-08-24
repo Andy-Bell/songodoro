@@ -20,14 +20,6 @@ describe('Timer', () => {
     expect(actual_node).not.to.be.undefined
   });
 
-  it('should call activatePlayer when timer reaches 0', () => {
-    timer.node.startFunc();
-    for(var i = 0; i < 9; i++) {
-      timer.node.tick();
-    };
-    expect(timer.state().test).to.equal('successful');
-  });
-
   it('does not display timer if handed {displayTimer: false} as props', () => {
     const timer = mount(<Timer activatePlayer={playerCallback} deactivatePlayer={playerCallback} displayTimer={false}/>);
     timer.node.startFunc();
