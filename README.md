@@ -7,66 +7,45 @@
 *   Test suite: Run `npm test`
 *   Local server: Run `npm start`
 
-## User Stories
+## Description
 
-```text
-As a user
-So that I can access the app
-I would like a webpage
-```
+A project built on the concept of the 'pomodoro' working technique, which plays a random track at a break interval every 25 minutes.
 
-```text
-As a user
-So that I can time my work
-I would like the page to display a timer
-```
+Users must have spotify open on their computers for the full track to play.
 
-```text
-As a user
-So that I can start my pomodoro
-I would like a start button
-```
+## Installation
 
-```text
-As a user
-So that I am entertained
-I want a song to play when the timer runs out
-```
-
-```text
-As a user
-So that I do not deviate from the pomodoro routine
-I would like the app to loop back
-```
-
-Refactor Guidance:
-
-```
-
- standardized es6 or es5
-
- separation of concerns - mount player is selecting a track
- showing the player as well as prep of the player
- seperate component of the player < - mounted or not
-
- rename functions to suit purpose more
-
- move unmount and mount into spotify player component
-
- renaming of functions around this
-
- timer:
- 2 parts: state and view
- extract timer into a module and fire events to listen for
-
- player could bind and listen to it
+1. Clone this repo.
+2. To configure, run: `npm install`
+3. Start local server: `npm start`
 
 
+Testing suite can be found through `npm test`
 
+## Using Songodoro
 
- main to control time -> spotify into spotify => timer function into timer
+Songodoro's default port is 8080 on the local host.
 
+Start local server, and navigate to http://localhost:8080/.
 
- top component should have the state
+Allow notifications:
 
-```
+![AllowNotifications](images/allownotifications.png)
+
+Songodoro will begin countdown from 25:00. User can revert back to 25:00 at any point by pressing reset.
+
+![countdownstart](images/countdownstart.png)
+
+When countdown has finished, a notification will pop up informing the user that the break has begun.
+
+![breaktime](images/musicnotification.png)
+
+Upon which, a spotify track will render onto the page, and the user will need to press play to hear the music.
+
+![music time](images/music.png)
+
+After the track has ended, the user will be informed with a new notification.
+
+![end time](images/breaknotification.png)
+
+The timer will reappear. User can repeat the Songodoro process by pressing start.
