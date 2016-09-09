@@ -41,7 +41,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <div className="title"><span className="slash">//  </span><span className="title-name">Songodoro</span><span className="slash">  //</span></div>
+        <div className="title"><span className="slash">
         {this.state.currentTrack ? <SpotifyPlayer track={this.state.currentTrack}/>  : null }
         <Timer ref="timer" activatePlayer={this.mountPlayer} deactivatePlayer={this.unMountPlayer} displayTimer={this.state.currentTrack ? false : true }/>
       </div>
