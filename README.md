@@ -13,6 +13,8 @@ A project built on the concept of the 'pomodoro' working technique, which plays 
 
 Users must have spotify open on their computers for the full track to play.
 
+Try it live at [Heroku](https://songodoro.herokuapp.com/)
+
 ## Installation
 
 1. Clone this repo.
